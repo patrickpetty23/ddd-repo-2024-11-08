@@ -20,8 +20,8 @@ const knex = require('knex')({
 
 // Define a route to get donuts from the database
 app.get('/', (req, res) => {
-  knex.select('donut', 'url')
-    .from('donuts') // Query the 'donut' table to get the name and image URL
+  knex.select('donut_name', 'url')
+    .from('donut_table') // Update this to match the table name in your database
     .then(result => {
       res.render('index', { donuts: result }); // Render index.ejs and pass the data
     })
