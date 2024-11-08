@@ -55,13 +55,13 @@
   <h1>Dr. Deagan Donut Company</h1>
   <p>Discover our delicious variety of donuts</p>
   <div class="container-list" id="donutList">
-    <% for (let iCount = 0; iCount < donuts.length; iCount++) { %>
-      <div class="donut-item">
-        <img src="<%= donut_table[iCount].url %>" alt="<%= donut_table[iCount].donut_name %>" class="donut-image">
-        <h3><%= donut_table[iCount].donut_name %></h3>
-        <p>Delicious and freshly made!</p>
-      </div>
-    <% } %>
-  </div>
+  <% for (let iCount = 0; iCount < donuts.length; iCount++) { %>
+    <div class="donut-item">
+      <img src="<%= donuts[iCount].url %>" alt="<%= donuts[iCount].donut_name %>" class="donut-image">
+      <h3><%= donuts[iCount].donut_name %></h3>
+      <p>Delicious and freshly made!</p>
+    </div>
+  <% } %>
+</div>
 </body>
 </html>
